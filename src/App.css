@@ -1,0 +1,36 @@
+#root {
+  margin: 0 auto;
+  text-align: center;
+  
+}
+
+body {
+  background-color: #3e494c;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-height: 70vh;
+  width: 30rem;
+  margin: 0 auto;
+  border: 1rem solid #ffffff;
+  border-radius: 20%;
+}
+
+.main-title {
+  color: #ffffff;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.coin-container {
+  margin: 2rem auto;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+}
