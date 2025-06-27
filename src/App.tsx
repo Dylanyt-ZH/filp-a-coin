@@ -9,13 +9,13 @@ function App() {
   return (
     <>
       <div className="container">
-        <h1 className="main-title">Filp the coin</h1>
+        <h1 className="main-title">Flip the coin</h1>
 
         <div className="coin-container">
           <img src={coinHead} alt="coin" className="coin" />
         </div>
         <div className="button-container">
-          <button>Filp the coin</button>
+          <button>Flip the coin</button>
         </div>
       </div>
     </>
