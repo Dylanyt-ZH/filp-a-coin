@@ -1,11 +1,8 @@
-import { useState } from "react";
 import coinHead from "./assets/head.png";
-import coinTail from "./assets/tail.png";
+// import coinTail from "./assets/tail.png";
 import "./App.css";
 
 function App() {
-  const [coin, setCoin] = useState(coinHead);
-
   return (
     <>
       <div className="container">
