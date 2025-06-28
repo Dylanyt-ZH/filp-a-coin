@@ -52,3 +52,9 @@ export default tseslint.config({
   },
 })
 ```
+
+
+## Display Link
+
+
+[Flip a coin]( https://dylanyt-zh.github.io/flip-a-coin/)
