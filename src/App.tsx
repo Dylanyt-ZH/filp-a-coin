@@ -1,6 +1,7 @@
 import coinHead from "./assets/head.png";
 import coinTail from "./assets/tail.png";
 import { useState } from "react";
+import Webhead from "./componments/webhead";
 import "./App.css";
 
 function App() {
@@ -8,6 +9,9 @@ function App() {
 
   return (
     <>
+      <Webhead />
+
+      {/* Body of the app */}
       <div className="container">
         <h1 className="main-title">Flip the coin</h1>
 
