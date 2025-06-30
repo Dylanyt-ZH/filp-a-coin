@@ -6,6 +6,28 @@ import "./App.css";
 
 function App() {
   const [coinFace, setCoinFace] = useState("head");
+  const [isFlipping, setIsFlipping] = useState(false);
+  const [tailcount, setTailCount] = useState(0);
+  const [headcount, setHeadCount] = useState(0);
+
+  function randomInt() {
+    var res = Math.floor(Math.random() * 2);
+    if (res === 0) {
+      setTailCount(tailcount + 1);
+    } else {
+      setHeadCount(headcount + 1);
+    }
+    return res;
+  }
+
+  const handleFlip = () => {
+    if (isFlipping) return;
+    setIsFlipping(true);
+    setTimeout(() => {
+      setCoinFace(randomInt() == 1 ? "tail" : "head");
+      setIsFlipping(false);
+    }, 600); // 动画时长与CSS一致
+  };
 
   return (
     <>
@@ -19,17 +41,16 @@ function App() {
           <img
             src={coinFace === "head" ? coinHead : coinTail}
             alt="coin"
-            className="coin"
+            className={`coin${isFlipping ? " flipping" : ""}`}
           />
         </div>
+        <div className="result-container">
+          <h2>Result: {coinFace}</h2>
+          <p>Heads: {headcount}</p>
+          <p>Tails: {tailcount}</p>
+        </div>
         <div className="button-container">
-          <button
-            onClick={() =>
-              coinFace === "head" ? setCoinFace("tail") : setCoinFace("head")
-            }
-          >
-            Flip the coin
-          </button>
+          <button onClick={() => handleFlip()}>Flip the coin</button>
         </div>
       </div>
     </>
