@@ -50,7 +50,7 @@ function App() {
           <p>Tails: {tailcount}</p>
         </div>
         <div className="button-container">
-          <button onClick={() => handleFlip()}>Flip the coin</button>
+          <button onClick={handleFlip}>Flip the coin</button>
         </div>
       </div>
     </>
