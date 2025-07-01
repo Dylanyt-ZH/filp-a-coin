@@ -35,20 +35,31 @@ body {
   margin-bottom: 4rem;
 }
 
-.coin.flipping {
-  animation: flip 0.6s;
-}
-
-@keyframes flip {
-  0% {
-    transform: rotateX(0deg);
-  }
-  100% {
-    transform: rotateX(1800deg);
-  }
-}
 
 .result-container {
   margin-top: 2rem;
   color: #ffffff;
+}
+
+
+.coin.move-updown {
+  animation: moveUpDown 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0) rotateX(0deg);
+  }
+  20% {
+    transform: translateY(-60px) rotateX(360deg);
+  }
+  50% {
+    transform: translateY(-120px) rotateX(900deg);
+  }
+  80% {
+    transform: translateY(-60px) rotateX(1440deg);
+  }
+  100% {
+    transform: translateY(0) rotateX(1800deg);
+  }
 }

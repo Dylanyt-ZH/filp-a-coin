@@ -41,7 +41,7 @@ function App() {
           <img
             src={coinFace === "head" ? coinHead : coinTail}
             alt="coin"
-            className={`coin${isFlipping ? " flipping" : ""}`}
+            className={`coin${isFlipping ? " move-updown" : ""}`}
           />
         </div>
         <div className="result-container">
